@@ -1,0 +1,204 @@
+/* assets/css/styles.css */
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', 'DejaVu Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  max-width: 210mm; /* A4 width */
+  margin: 2rem auto;
+  padding: 0 2rem;
+/*   background-color: #f8fafc; */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cambria', 'Roboto Slab', 'Georgia', serif;
+}
+
+h1 {
+  color: #1a365d;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.025em;
+  white-space: nowrap; /* Keeps name on one line */
+}
+
+h2 {
+  color: #2d3748;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+/* Links */
+a {
+  color: #2a9d8f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1e7460;
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+/* Text Formatting */
+strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Summery sections */
+h3 + p + hr + h2 + p {
+    background-color: rgb(235, 244, 255);
+    border-left: 4px solid rgb(49, 130, 206);
+    padding: 1rem 1.5rem;
+    margin: 1rem 0px 1.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Work Experience Sections */
+.experience-highlight {
+  background-color: #ebf4ff;
+  border-left: 4px solid #3182ce;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0 1.5rem;
+  border-radius: 0.25rem;
+}
+
+h3[id^="software-engineer"] {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+h3 + p + hr + h2 + p strong, /* summary highlight section */
+h3[id^="software-engineer"] ~ p strong, /* existing work items */
+h2 + p strong {
+  color: #3182ce;
+  font-weight: 600;
+}
+
+/* Technologies formatting */
+h3[id^="software-engineer"] ~ p em {
+  font-family: 'SF Mono', 'Cascadia Code', Menlo, monospace;
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-style: normal;
+}
+
+/* Separators */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 1.5rem 0;
+}
+
+/* Skills sections */
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.skills-section strong {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  color: #3182ce;
+}
+
+/* References */
+.references {
+  text-align: center;
+  font-style: italic;
+  color: #718096;
+  margin-top: 1rem;
+}
+
+/* Add emoji fallback for PDF */
+@font-face {
+  font-family: "NotoEmoji";
+  src: url(https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    font-family: 'DejaVu Sans', "NotoEmoji", sans-serif !important;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+    padding: 0 0.5cm;
+    background-color: white;
+    max-width: none;
+  }
+  
+  
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  h3 + p {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  ul {
+    padding-left: 1.25rem;
+  }
+  
+  .skills-section {
+    flex-direction: column;
+  }
+}
+
